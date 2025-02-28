@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Insight Issue New', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+nav.menu {
+    background-color: #e7a200;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+nav.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: wrap;
+    gap: 20px;
+}
+
+nav.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+    margin: 10px;
+    padding: 10px 10px;
+
+}
+
+nav.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav.menu ul li a.active {
+    border-radius: 5px;
+
+}
+
+.galeria-container {
+    padding: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;    
+    font-size: 3em ;                            
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.filtros .btn {
+    background: none;
+    border: 2px solid #e7a200;
+    padding: 12px 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    font-family: 'Insight Issue New', sans-serif;
+}
+
+.filtros .btn:hover, .filtros .btn.active {
+    background-color: #e7a200;
+    color: white;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.obra-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.obra-item:hover {
+    transform: scale(1.05);
+}
+h3{
+    font-family: 'khabi', sans-serif;
+}
+p{
+    font-size: 0.8em;
+    font-family: 'Japari Sans', sans-serif;
+    font-weight: 900;
+                                                
+                                                
+}
+.obra-imagen {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.obra-info {
+    padding: 1rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.obra-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+}
+
+.obra-info p {
+    margin: 5px 0;
+}
+
+.btn-detalle {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Harting', sans-serif;
+
+}
+
+.btn-detalle:hover {
+    background-color: #555;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.destacados {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.carousel img {
+    max-width: 200px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.1);
+}
+
+.cta-galeria {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta-galeria p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.cta-galeria .btn-cta {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-galeria .btn-cta:hover {
+    background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    .obra-imagen {
+        height: 300px; 
+    }
+}
+
+.eventos-container {
+    padding: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filtros-eventos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.btn-evento {
+    background: none;
+    border: 2px solid #e7a200;
+    padding: 12px 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    font-family: 'Insight Issue New', sans-serif;
+
+}
+
+.btn-evento:hover, .btn-evento.active {
+    background-color: #e7a200;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.evento-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.evento-item:hover {
+    transform: translateY(-5px);
+}
+
+.evento-imagen {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.evento-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.evento-item:hover .evento-imagen img {
+    transform: scale(1.05);
+}
+
+.fecha-evento {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(231, 162, 0, 0.9);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.dia {
+    font-size: 1.8em;
+    font-weight: bold;
+    display: block;
+}
+
+.mes {
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.evento-info {
+    padding: 1.5rem;
+}
+
+.detalles-evento {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.descripcion {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin: 1rem 0;
+    color: #444;
+}
+
+.destacados-eventos {
+    margin: 4rem 0;
+}
+
+.carousel-eventos {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.evento-destacado {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.evento-destacado img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.info-destacado {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 0, 179, 0.8), transparent);
+    color: white;
+    padding: 3rem;
+    margin-bottom: 9.5px;
+    text-align: center;
+}
+.info-destacado-negro{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 3rem;
+    margin-bottom: 9.5px;
+    text-align: center;
+}
+.info-destacado-akira{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 196, 0, 0.8), transparent);
+    color: white;
+    padding: 3rem;
+    margin-bottom: 9.5px;
+    text-align: center;
+}
+.info-destacado-verde{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(20, 171, 128, 0.8), transparent);
+    color: white;
+    padding: 3rem;
+    margin-bottom: 9.5px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .eventos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .carousel-eventos {
+        flex: 0 0 95%;
+    }
+    
+    .evento-destacado {
+        flex: 0 0 90%;
+    }
+}
+
+
+
+.footer {
+    background: linear-gradient(135deg,  #e7a200, #e7a200);
+    color: white;
+    text-align: center;
+    margin-top:70px;
+    width: 100%;
+    height: auto;
+    font-family: 'khabi', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+     gap: 20px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+    width: 100%;
+}
+.footer h6{
+    font-family: 'Insight Issue New';
+    font-size: 1.8em;
+    color: rgb(54, 50, 50);
+
+    
+}
+.footer nav {
+    min-width: 120px;
+    margin-bottom: 40px;
+
+}
+
+.footer-heading {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 5px 0;
+}
+
+.footer-link:hover {
+    color: rgb(54, 50, 50);
+    transform: translateX(5px);
+}
+
+
